@@ -13,7 +13,8 @@ string id;
 int criticidad;
 double estado;
 double prioridad;
-float tiempoAct;
+int tiempoInactivo;
+int desgaste;
 
 Incidencia* incidencia;
 int can;
@@ -35,6 +36,7 @@ Equipo(string id, int criticidad, double estado);
     void degradar();
     void incrementarTiempoInactivo();
     void resetTiempoInactivo();
+void contarIncidencias();
     void calcularPrioridad();
     void aplicarMantenimiento();
 
