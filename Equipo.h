@@ -2,9 +2,7 @@
 
 #ifndef PROYECTO1PROGRA2_EQUIPO_H
 #define PROYECTO1PROGRA2_EQUIPO_H
-#iclude <string>
-#include "Incidencia.h"
-using namespace std;
+
 
 class Equipo {
 
@@ -12,17 +10,12 @@ private:
 string id;
 int criticidad;
 double estado;
-double prioridad;
-int tiempoInactivo;
-int desgaste;
-
-Incidencia* incidencia;
-int can;
-int tam;
+int incidenciasAct;
+float tiempo;
 
 public:
 Equipo(string id, int criticidad, double estado);
-~Equipo();
+
     string getId() const;
     int getCriticidad() const;
     double getEstado() const;
@@ -36,7 +29,6 @@ Equipo(string id, int criticidad, double estado);
     void degradar();
     void incrementarTiempoInactivo();
     void resetTiempoInactivo();
-void contarIncidencias();
     void calcularPrioridad();
     void aplicarMantenimiento();
 
