@@ -6,12 +6,12 @@ using namespace std;
 
 class Incidencia {
 private:
-bool activa;
+    bool activa;
 
 public:
-Incidencia();
-bool estaActivo();
-void inactivo();
+    Incidencia();
+    bool estaActivo();
+    void inactivo();
 };
 
 

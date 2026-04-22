@@ -7,7 +7,7 @@ Incidencia::Incidencia() {
     activa = true;
 }
 
-bool Incidencia::estaActiva() {
+bool Incidencia::estaActivo() {
     return activa;
 }
 

@@ -1,8 +1,8 @@
-#ifndef PROYECTO1PROGRA2_EQUIPO_H
-#define PROYECTO1PROGRA2_EQUIPO_H
+#ifndef PROYECTO1PROGRA2_COMPUTADORA_H
+#define PROYECTO1PROGRA2_COMPUTADORA_H
+
 #include <string>
 
-#include "EquipoGeneral.h"
 #include "EquipoGeneral.h"
 
 
@@ -11,6 +11,7 @@ using namespace std;
 class Computadora: public EquipoGeneral {
 
 private:
+    string id;
     int criticidad;
     double estado;
     int incidenciasAct;

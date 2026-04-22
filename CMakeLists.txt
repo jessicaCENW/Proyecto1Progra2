@@ -7,6 +7,13 @@ add_executable(Proyecto1Progra2 main.cpp
         Computadora.cpp
         Computadora.h
         Incidencia.h
+        Incidencia.cpp
         EquipoGeneral.cpp
         EquipoGeneral.h
+        DecoradorEquipo.cpp
+        DecoradorEquipo.h
+        Mouse.cpp
+        Mouse.h
+        Teclado.cpp
+        Teclado.h
 )
