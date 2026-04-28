@@ -1,6 +1,4 @@
-//
-// Created by pc1 on 21/4/2026.
-//
+
 
 #ifndef PROYECTO1PROGRA2_MOUSE_H
 #define PROYECTO1PROGRA2_MOUSE_H

@@ -16,4 +16,6 @@ add_executable(Proyecto1Progra2 main.cpp
         Mouse.h
         Teclado.cpp
         Teclado.h
+        Controlador.cpp
+        Controlador.h
 )

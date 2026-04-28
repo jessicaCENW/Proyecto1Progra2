@@ -1,7 +1,5 @@
 
-
 #include "Incidencia.h"
-
 
 Incidencia::Incidencia() {
     activa = true;

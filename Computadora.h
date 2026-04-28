@@ -1,11 +1,7 @@
-#ifndef PROYECTO1PROGRA2_COMPUTADORA_H
-#define PROYECTO1PROGRA2_COMPUTADORA_H
-
+#ifndef PROYECTO1PROGRA2_Computadora_H
+#define PROYECTO1PROGRA2_Computadora_H
 #include <string>
-
 #include "EquipoGeneral.h"
-
-
 using namespace std;
 
 class Computadora: public EquipoGeneral {
