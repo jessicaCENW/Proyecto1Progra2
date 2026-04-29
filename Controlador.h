@@ -2,18 +2,18 @@
 
 #ifndef PROYECTO1PROGRA2_CONTROLADOR_H
 #define PROYECTO1PROGRA2_CONTROLADOR_H
-#include "EquipoGeneral"
+#include "EquipoGeneral.h"
 
 class Controlador {
 private:
-EquipoGeneral* equipos;
-int can;
-int tam;
+    EquipoGeneral* equipos;
+    int can;
+    int tam;
 
 public:
-Controlador();
-void agregarEquipo(EquipoGeneral* equi);
-void simulacion();
+    Controlador();
+    void agregarEquipo(EquipoGeneral* equi);
+    void simulacion();
 
 };
 

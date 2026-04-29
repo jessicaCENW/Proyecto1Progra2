@@ -10,8 +10,22 @@ class DecoradorEquipo : public EquipoGeneral {
     EquipoGeneral* decoracion;
 
     public:
-    DecoradorEquipo(EquipoGeneral* d): decoracion(d) {}
+    DecoradorEquipo(EquipoGeneral* d):EquipoGeneral(d->getId(), d->getCriticidad(), d->getEstado()), decoracion(d){}
     virtual ~DecoradorEquipo(){ delete decoracion; }
+
+    void degradar() override {
+        decoracion->degradar();
+        estado=decoracion->getEstado();
+        tiempoInactivo=decoracion->getTiempoInactivo();
+        cantIncidencias=decoracion->getCantIncidencias();
+    }
+
+    void aplicarMantenimiento() override {
+        decoracion->aplicarMantenimiento();
+        estado=decoracion->getEstado();
+        tiempoInactivo=decoracion->getTiempoInactivo();
+        cantIncidencias=decoracion->getCantIncidencias();
+    }
 
 };
 

@@ -18,4 +18,7 @@ add_executable(Proyecto1Progra2 main.cpp
         Teclado.h
         Controlador.cpp
         Controlador.h
+        Excepciones.h
+        Reporte.cpp
+        Reporte.h
 )

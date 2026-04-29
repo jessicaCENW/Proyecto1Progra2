@@ -13,6 +13,13 @@ class Mouse : public DecoradorEquipo{
     string descripcion() const override {
         return decoracion->descripcion() + " + Mouse";
     }
+    void aplicarMantenimiento() override {
+        DecoradorEquipo::aplicarMantenimiento();
+        estado += 2;
+        if (estado > 100) {
+            estado = 100;
+        }
+    }
 };
 
 

@@ -5,54 +5,58 @@
 #include <sstream>
 #include <string>
 #include "EquipoGeneral.h"
+#include <iostream>
+#include "Incidencia.h"
 using namespace std;
+
+Computadora::Computadora(string id, int criticidad, double estado)
+    : EquipoGeneral(id, criticidad, estado) {
+}
 
 string Computadora::descripcion() const {
     stringstream ss;
     ss<<"Computadora: "<< id <<endl;
+    ss<< "Criticidad: " << criticidad<<endl;
+    ss<< "Estado: "     << estado;
 
     return ss.str();
 }
 
-
-string Computadora::getId() const { return id; }
-int Computadora::getCriticidad() const { return criticidad; }
-double Computadora::getEstado() const { return estado; }
-int Computadora::getTiempoInactivo() const { return tiempoInactivo; }
-double Computadora::getPrioridad() const {return prioridad;}
-
 void Computadora::setEstado(double nuevoEstado) {estado = nuevoEstado;}
 
 void Computadora::degradar(){
-double desgaste= criticidad*0.2;
-estado += desgaste;
+    double desgaste= criticidad*0.2;
+    estado -= desgaste;
 
-if(estado<=0){
-esatdo=0;}
-}
-
-void  Compoutadora::incrementarTiempoInactivo(){
-tiempoInactivo++;
+    if(estado<=0){
+        estado=0;}
 }
 
-void Computadora::resetTiempoInactivo(){
-tiempoInactivo = 0;
+void  Computadora::incrementarTiempoInactivo(){
+    tiempoInactivo++;
 }
 
-void calcularPrioridad(){
-    prioridad = (criticidad * 0.5) +
-                    (incidencias * 0.3) +
-                    (tiempoInactivo * 0.2);
+
+void Computadora::aplicarMantenimiento(){
+    if(estado>=100){
+        estado=100;
+    }
+    for (Incidencia* i : incidencias) {
+        if (i->estaActivo()) {
+            i->resolver();
+        }
+    }
+    cantIncidencias=0;
+    resetTiempoInactivo();
 }
 
-void aplicarMantenimiento(){
-if(estado>=100){
-estado=0;
-}
-incidenciasAct=0;
-resetTiempoInactivo();
-}
-string Computadora::descripcion() const {
-return "Computadora: ID "<<getId();<<endl
-}
 
+void Computadora::formateo() {
+    estado=90;
+    for (Incidencia* i : incidencias) {
+        i->resolver();
+    }
+    cantIncidencias=0;
+    resetTiempoInactivo();
+
+}
